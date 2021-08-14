@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM event </title>
+</head>
+
+<body>
+
+    <!-- <h1 onclick="alert('masud tumi kharap hoye jao')">Event niya click bazi mustafi</h1> -->
+    <h1 onclick="alert('masud tumi kharap hoye jao')">Event niya click bazi mustafi</h1>
+
+    <!-- <button onclick="alert(6)">Click me mustafiz</button> -->
+    <!-- <button onclick="console.log(6)">Click me mustafiz</button> -->
+    <!-- <button onclick="console.log('yes this is mustafiz')">Click me mustafiz</button> -->
+    <!-- Button event 1 -->
+    <button onclick="document.body.style.backgroundColor='yellow'">Click me Yellow</button>
+    <!-- Button event 2 -->
+    <button onclick="makered()">Click me Red</button>
+    <!-- Button event 3 -->
+    <button id="blue-btn">Click me BLuee</button>
+
+    <!-- Button event 4 -->
+    <button id="black-btn"> CLick me black</button>
+
+
+    <!--Button event 5  -->
+    <button id="violet-btn"> Clcik me:Blueviolet </button>
+
+
+    <!--  Button event 6 -->
+    <button id="hotPink-btn"> click me Hotpink</button>
+
+
+    <!-- Button event 7 -->
+    <button id="lightblue-btn">click me Lightblue</button>
+
+
+
+
+
+
+
+
+
+    <!-- // Method 1 -->
+    <script src="../JS_FOLDER/script.js"></script>
+
+    <!-- // Method 2 -->
+    <script>
+
+        // Button 2
+        // function makered() {
+        //     document.body.style.backgroundColor = 'red';
+        // }
+
+
+        // button 3
+        // var blueButton = document.getElementById('blue-btn');
+        // // blueButton.onclick = makeBlue();
+        // blueButton.onclick = makeBlue;
+        // function makeBlue() {
+        //     document.body.style.backgroundColor = 'blue';
+        // }
+        // console.log(blueButton)
+
+        // button 4
+        // const blackButton = document.getElementById('black-btn');
+        // // blackButton.onclick = function makeblack() {
+        // //     document.body.style.backgroundColor = 'Black';
+        // // }
+        // // console.log(blackButton);
+
+        // // Using anonymous function---> NoName
+        // blackButton.onclick = function () {
+        //     document.body.style.backgroundColor = 'Black';
+        // }
+
+
+
+        // //button 5
+        // const violetButton = document.getElementById('violet-btn');
+        // // handle by event listener
+        // violetButton.addEventListener('click', makeViolet); // ki korbe , kake korbe
+        // function makeViolet() {
+        //     document.body.style.backgroundColor = 'BlueViolet';
+        // }
+
+        // // console.log(violetButton);
+
+
+        // // button 6
+        // const hotPinkButton = document.getElementById('hotPink-btn');
+        // hotPinkButton.addEventListener('click', function makePink() {
+        //     document.body.style.backgroundColor = 'hotpink';
+        // })
+        // // console.log(hotPinkButton);
+
+        // Button 7
+        // direct shortcut
+        // const lightblueButton = document.getElementById('lightblue-btn');
+
+        // document.getElementById('lightblue-btn').addEventListener('click', function () {
+        //     document.body.style.backgroundColor = 'lightBlue';
+        // })
+        // // console.log(lightblueButton);
+
+
+        // document.getElementsByTagName("button")
+
+    </script>
+
+</body>
+
+</html>

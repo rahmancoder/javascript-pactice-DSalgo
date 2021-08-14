@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="click-method"></p>
+
+    <input id="input-name" type="text">
+    <button id="update-name">Update</button>
+    <button onclick="handleJustfuncclick()">
+        Just Function
+    </button>
+    <button id="handle-event">
+        Direct Event lisneer
+    </button>
+
+    <script src=""></script>
+    <script>
+
+        function handleJustfuncclick() {
+            const clickingmethod = document.getElementById('click-method');
+            clickingmethod.innerText = 'set by user mustafiz';
+        }
+
+        // direct
+        document.getElementById('handle-event').addEventListener('click', function () {
+
+            const addText = document.getElementById('click-method');
+            addText.innerText = "add by eventlisner mustafiz";
+        })
+
+        // event with input direct
+        document.getElementById('update-name').addEventListener('click', function () // call back ba anonymous function
+        {
+            const inputText = document.getElementById('input-name');
+            // console.log(inputText.value);
+            const addText = document.getElementById('click-method');
+            addText.innerText = inputText.value; // iput field er value boshabo
+            inputText.value = ''; // clearing the input value
+
+            // console.log(inputText);
+
+        })
+    </script>
+</body>
+
+</html>

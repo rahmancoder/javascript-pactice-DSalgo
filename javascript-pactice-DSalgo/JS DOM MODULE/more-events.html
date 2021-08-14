@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets explore event</title>
+</head>
+
+<body>
+    <h2>More events</h2>
+    <section>
+        <h3 id="secret-info">Very very important info</h3>
+        <input id="confirm-delete" type="text" placeholder="please type delete">
+        <button id="delete-btn" disabled>DELETE</button>
+    </section>
+
+    <script>
+
+        document.getElementById('delete-btn').addEventListener('click', function () {
+            document.getElementById('secret-info').style.display = 'none';
+        })
+
+        // focus
+        document.getElementById('confirm-delete').addEventListener('focus', function () {
+            document.body.style.backgroundColor = 'orange';
+            console.log("o amar dike taksee aolakaaa");
+        })
+
+        // Blur  ---> jokhon focus a thakbe na
+
+        document.getElementById('confirm-delete').addEventListener('blur', function () {
+            document.body.style.backgroundColor = 'white';
+            console.log("o amar dike taksee aolakaaa");
+        })
+
+
+        // key press event --> key Down , key UP, key Prress
+
+
+        // key down -->> akta pore pore astese letter from keyboard
+        // document.getElementById('confirm-delete').addEventListener('keydown', function () {
+        //     // document.body.style.backgroundColor = 'white';
+        //     // console.log("keydown");
+
+        //     const deleteField = document.getElementById('confirm-delete');
+        //     console.log(deleteField.value)
+        // })
+
+        // key Press -- problem akta pore pore astese letter from keyboard
+        // document.getElementById('confirm-delete').addEventListener('keypress', function () {
+        //     // document.body.style.backgroundColor = 'white';
+        //     // console.log("keydown");
+
+        //     const deleteField = document.getElementById('confirm-delete');
+        //     console.log(deleteField.value)
+        // })
+
+        // key UP --> problem solve sathe sathe astese letter from keyboard
+        document.getElementById('confirm-delete').addEventListener('keyup', function (event) {
+            // document.body.style.backgroundColor = 'white';
+            // console.log("keydown");
+
+            // const deleteField = document.getElementById('confirm-delete');
+            // console.log(deleteField.value)
+
+            //Condition for disable enabled 
+            // console.log(event);
+            const deleteBtn = document.getElementById('delete-btn');
+            if (event.target.value == 'delete') {
+                deleteBtn.removeAttribute('disabled');
+                console.log('You can delete now');
+            }
+            else {
+                deleteBtn.setAttribute('disabled', true);
+                console.log('you cannot delete');
+            }
+        })
+
+        // keychange dore felbe paste letter -- jhokon blur a thake tokon e show korbe
+        document.getElementById('confirm-delete').addEventListener('change', function () {
+            // document.body.style.backgroundColor = 'white';
+            // console.log("keydown");
+
+            const deleteField = document.getElementById('confirm-delete');
+            console.log(deleteField.value)
+        })
+    </script>
+</body>
+
+</html>

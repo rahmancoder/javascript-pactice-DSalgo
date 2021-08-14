@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Comment Mustafiz</title>
+</head>
+
+<body>
+    <h2></h2>
+    <section>
+        <h4> Your Comment please </h4>
+        <div id="mustafiz-container">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum laborum impedit quibusdam optio
+                recusandae totam.</p>
+            <p>Laborum quasi temporibus iure quae impedit suscipit, incidunt hic adipisci at in doloribus omnis ducimus?
+            </p>
+
+        </div>
+        <div>
+
+            <!-- Task Iput field er text Post button a click korle ta amader body paragraper nicche add hobe -->
+            <!-- <p>Add your comment please</p> -->
+            <!-- <input type="text" name="" id=""> -->
+            <textarea name="" id="new-comment" cols="30" rows="5"></textarea>
+            <br>
+            <button id="submit-comment">Post</button>
+        </div>
+    </section>
+
+
+
+    <script src=""></script>
+    <script>
+        // 1. add event handler
+        document.getElementById('submit-comment').addEventListener('click', function () {
+
+            // 2. get user comment 
+            const commentBox = document.getElementById('new-comment');
+            // console.log(commentBox.value);
+
+            // console.log('clicked');
+
+            // 3. create JS Paragrap with DOM
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value;
+
+            //4. Append the comment 
+            const commnetContainer = document.getElementById('mustafiz-container');
+            commnetContainer.appendChild(newComment);
+
+            // console.log(commnetContainer);
+
+            // 5. clean the comment Box
+            commentBox.value = '';
+
+        })
+    </script>
+
+</body>
+
+</html>
